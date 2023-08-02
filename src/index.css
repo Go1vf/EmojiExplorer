@@ -1,3 +1,6 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,42 +10,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: BlinkMacSystemFont, source-code-pro, Menlo, Monaco, Consolas, 'Oxygen',
-    monospace;
+.container {
+  display: flex;
+}
+.record {
+  font-size: 25px;
+  color: #000;
+  margin-top: 25px;
+  margin-left: 15px;
 }
 
+/* Game Box Styles */
 .gamebox {
-  width: 600px;
-  margin: 0 auto;
+  width: 800px;
+  margin: 50px auto;
   border-radius: 20px;
+  background: linear-gradient(135deg, #f5ba13, #f06292);
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  color: white;
+}
+
+/* Title Area Styles */
+.title {
+  width: 70%;
+  height: 100px;
+  background-color: hsl(44, 92%, 52%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
+  color: #000;
+  animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+  0% { color: #000; }
+  40% { color: #f00; }
+  60% { color: rgb(243, 131, 10); }
+  100% { color: #000000; }
 }
 
 .titleAreaTitle {
-  font-size: 30px;
-  text-shadow: 1px 1px 1px rgb(78, 75, 75)
+  padding: 20px;
+  background-color: #303f9f;
+  border-radius: 10px;
+  font-size: 100px;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 1px 1px 1px rgb(78, 75, 75);
+  margin-bottom: 10px;
 }
 
 .titleAreaScore {
   font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.titleArea {
-  margin-top: 20px;
-  width: 100%;
-  height: 23%;
-  background-color: #f5ba13;
-  border-radius: 10px;
-  margin-bottom: 2%;
-  text-align: center;
-}
-
+/* Game Area Styles */
 .gameArea {
+  background-color: #37474f;
   position: relative;
   border: 2px solid black;
   height: 500px;
   border-radius: 9px;
-
 }
 
 .gameAreaFloor {
@@ -55,6 +91,28 @@ code {
   transform: translate(-50%, -50%);
 }
 
+.gameItem {
+  background-color: #1976d2;
+  color: #fff;
+  pointer-events: auto;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 48px;
+  box-shadow: 2px 2px 4px #000;
+  border: 1px solid #c2cbcbee;
+  cursor: pointer;
+  margin: 0 5px 5px 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.gameItem:hover {
+  background-color: #2196f3;
+}
+
+/* Operate Area Styles */
 .operateArea {
   width: 100%;
   height: 80px;
@@ -64,26 +122,7 @@ code {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-
-
-}
-
-.gameItem {
-  pointer-events: auto;
-  border-radius: 8px;
-  width: 48px;
-  height: 48px;
-  text-align: center;
-  font-size: 25px;
-  line-height: 50px;
-  box-shadow: 2px 2px 4px #000;
-  border: 1px solid #c2cbcbee;
-  cursor: pointer;
-  margin: 0px 5px 5px 0;
-}
-
-.gameItem:hover {
-  background: #fff;
+  overflow-x: auto;
 }
 
 .gameItemOperate {
@@ -97,26 +136,33 @@ code {
   border: 1px solid #000;
   cursor: pointer;
   margin-right: 10px;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.operateBtnArr {
-  position: absolute;
-  display: flex;
-  padding: 10px;
-  top: 20px;
-  left: 100px;
-
-}
-
-.operateBtn {
-  width: 120px;
-  height: 50px;
-  font-size: 20px;
-  line-height: 50px;
+.gameItemOperate:hover {
   background-color: #f08300;
-  margin-right: 10px;
-  text-align: center;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 2px 2px 4px #aaaaaa;
 }
+
+/* Google Login Button Styles */
+.google-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #4285f4;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 2px 2px 4px #aaaaaa;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.google-login-btn:hover {
+  background-color: #3367d6;
+}
+
+/* ... Additional styles ... */

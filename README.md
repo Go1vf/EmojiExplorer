@@ -18,7 +18,7 @@ To install and run this project locally, follow these steps:
 
 ## Usage
 
-Once you've started the game, you'll be presented with a series of emojis. You need to collect 3 same emojis and put them into the basket. 3 same emojis in the basket will trade into one score. Notice that the upper limit of the number of emojis it can hold is 7, meaning that if you can't find the same 3 emojis within 7 actions, you lost the game. 
+Once you've started the game, you'll be presented with a series of emojis. You need to collect 3 same emojis and put them into the basket. 3 same emojis in the basket will trade into 100 score. Notice that the upper limit of the number of emojis it can hold is 7, meaning that if you can't find the same 3 emojis within 7 actions, you lost the game. 
 The mechanic of the game is still waiting for future improvement. 
 For now, you can only interact with these emojis according to the game's rules. As you progress through the game, the difficulty increases, providing a fun and challenging experience.
 
